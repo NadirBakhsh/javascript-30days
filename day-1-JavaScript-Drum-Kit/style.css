@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    align-items: center;
+}
+
+body h1 {
+    color: gray;
+    text-shadow: #000;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+}
+
+div.keys .key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #000;
+    transition: all 0.07s;
+    padding: 12px;
+    border-radius: 4px;
+    min-width: 54px;
+    margin: 4px;
+}
+
+div.keys .key>kbd {
+    font-size: 32px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.keys .key>.sound {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: greenyellow;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: 3px solid goldenrod !important;
+    box-shadow: #212121 1px 1px 1px 1px;
+}
