@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./style.css" type="text/css" rel="stylesheet" />
+		<title>Day 2 CSS + JS Clock</title>
+	</head>
+	<body>
+		<h1>Update CSS Variables with JS</h1>
+
+		<div class="controls">
+			<span>
+				<label>Spacing : </label>
+				<input type="range" min="10" max="200" value="10" name="spacing" data-size="px" />
+			</span>
+			<span>
+				<label>Blur : </label>
+				<input type="range" min="0" max="25" value="10" data-size="px" name="blur" />
+			</span>
+			<span>
+				<label>Colors : </label>
+				<input type="color" min="0" max="25" value="#ffc600" data-size="px" name="base" />
+			</span>
+		</div>
+
+        <div>
+            <img src="./image/wallpaper.jpg" />
+        </div>
+
+		<script>
+
+            const inputs = document.querySelectorAll('.controls input')
+
+            function updateHandle() {
+                const suffix = this.dataset.size || '';
+                document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
+            }
+
+            inputs.forEach((input) => input.addEventListener('change', updateHandle) )
+
+        </script>
+	</body>
+</html>
