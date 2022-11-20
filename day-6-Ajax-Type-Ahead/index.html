@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./style.css" type="text/css" rel="stylesheet" />
+		<title>Day 6 Ajax Type Ahead</title>
+	</head>
+	<body>
+		<h1>Search Data</h1>
+
+		<form>
+		<div class="search-wrap">
+			<input class="input-searching" name="search" placeholder="Searching" />
+
+			<div class="table-wrapper">
+				<table border="0" >
+					<thead>
+						<th>City</th>
+						<th>growth</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Population</th>
+						<th>Rank</th>
+						<th>State</th>
+					</thead>
+					<tbody class="suggestions">
+						<tr><td colspan="7" align="center">Please Type for search</td></tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</form>
+
+		<script>
+
+			const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+			const data = []
+
+			fetch(endpoint).then(res => res.json()).then(res => {
+				data.push(...res)
+			})
+
+			function  findMatches(wordToMatch, data) {
+				return data.filter(item => {
+					const regex = new RegExp(wordToMatch,  'gi')
+					return item.city.match(regex) || item.state.match(regex) 
+				})
+			}
+
+
+			
+
+			function displayMatches() {
+			 const matchedData = findMatches(this.value, data)
+			const html = matchedData.map((item) => {
+				console.log('item', item)
+				return `<tr>
+					<td>${item.city}</td>
+					<td>${item.growth_from_2000_to_2013}</td>
+					<td>${item.latitude}</td>
+					<td>${item.longitude}</td>
+					<td>${item.population}</td>
+					<td>${item.rank}</td>
+					<td>${item.state}</td>
+					</tr>`
+				}).join('')
+
+				const dataNotFound = `<tr><td colspan="7" align="center"> Data Not Found</td></tr>`
+				
+				suggestions.innerHTML = matchedData.length > 0 ? html : dataNotFound 
+			}
+
+			const searchInput = document.querySelector('.input-searching')
+			const suggestions = document.querySelector('.suggestions')
+
+			searchInput.addEventListener('keyup', displayMatches)
+
+		</script>
+	</body>
+</html>
