@@ -1,0 +1,90 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+body {
+    background: #eceeec;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body h1 {
+    padding: 24px;
+    color: #212121;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.card {
+    margin: 24px;
+    width: 240px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(1.05);
+}
+
+.card .card-body img {
+    width: 240px;
+    object-fit: cover;
+
+}
+
+.card-footer,
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.card-head>a.git,
+.card-head b {
+    font-size: 24px;
+}
+
+.card-head a.git:hover, .card-footer a:hover {
+    color: blue;
+}
+
+.card-footer span {
+    text-decoration: none;
+    color: #212121;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    max-height: 42px;
+    height: 42px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+}

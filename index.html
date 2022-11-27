@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./style.css" type="text/css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<title>30 Days JS Project</title>
+	</head>
+	<body>
+		<h1>Basic Javascript 30 projects</h1>
+		<!-- <a target="_blank"></a> -->
+		<div class="wrapper"></div>
+		<script>
+			const projects = [
+				{
+					name: 'JavaScript-Drum-Kit',
+					link: './day-1-JavaScript-Drum-Kit/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-1-JavaScript-Drum-Kit',
+				},
+				{
+					name: 'CSS JS Clock',
+					link: './day-2-CSS-JS-Clock/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-2-CSS-JS-Clock',
+				},
+				{
+					name: 'CSS Variables JS',
+					link: './day-3-CSS-Variables-JS/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-3-CSS-Variables-JS',
+				},
+				{
+					name: 'Array Cardio',
+					link: './day-4-Array-Cardio/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-4-Array-Cardio',
+				},
+				{
+					name: 'Flex Panels Image Gallery',
+					link: './day-5-Flex-Panels-Image-Gallery/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-5-Flex-Panels-Image-Gallery',
+				},
+				{
+					name: 'Ajax Type Ahead',
+					link: './day-6-Ajax-Type-Ahead/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-6-Ajax-Type-Ahead',
+				},
+				{
+					name: 'Array cardio 2',
+					link: './day-7-Array-cardio-2/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-7-Array-cardio-2',
+				},
+				{
+					name: 'Fun with HTML5 Canvas',
+					link: './day-8-Fun-with-HTML5-Canvas/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-8-Fun-with-HTML5-Canvas',
+				},
+				{
+					name: 'Dev Tools Domination',
+					link: './day-9-Dev-Tools-Domination/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-9-Dev-Tools-Domination',
+				},
+				{
+					name: 'Shift Multiple Check boxes',
+					link: './day-10-Hold-Shift-To-Check-Multiple-Checkboxes/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-10-Hold-Shift-To-Check-Multiple-Checkboxes',
+				},
+				{
+					name: 'Custom Video Player',
+					link: './day-11-Custom-Video-Player/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-11-Custom-Video-Player',
+				},
+				{
+					name: 'Key Sequence Detection',
+					link: './day-12-Key-Sequence-Detection/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-12-Key-Sequence-Detection',
+				},
+				{
+					name: 'Slide In on Scroll',
+					link: './day-13-Slide In on Scroll/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-13-Slide%20In%20on%20Scroll',
+				},
+				{
+					name: 'Var References VS Copying',
+					link: './day-14-JavaScript References VS Copying/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-14-JavaScript%20References%20VS%20Copying',
+				},
+				{
+					name: 'Storage Event Delegation',
+					link: './day-15-LocalStorage and Event Delegation/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-15-LocalStorage%20and%20Event%20Delegation',
+				},
+				{
+					name: 'Shadow Effect and  Mouse',
+					link: './day-16-CSS Text Shadow Mouse Move Effect/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-16-CSS%20Text%20Shadow%20Mouse%20Move%20Effect',
+				},
+				{
+					name: 'Sorting Names ',
+					link: './day-17-Sorting Band Names without articles/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-17-Sorting%20Band%20Names%20without%20articles',
+				},
+				{
+					name: 'String Times with Reduce',
+					link: './day-18-Tally String Times with Reduce/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-18-Tally%20String%20Times%20with%20Reduce',
+				},
+				{
+					name: 'Webcam features',
+					link: './day-19-Unreal Webcam Fun/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-19-Unreal%20Webcam%20Fun',
+				},
+				{
+					name: 'Voice Recognition',
+					link: './day-20-Native Speech Recognition/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-20-Native%20Speech%20Recognition',
+				},
+				{
+					name: 'Speedometer Compass',
+					link: './day-21-Geolocation based Speedometer and Compass/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-21-Geolocation%20based%20Speedometer%20and%20Compass',
+				},
+				{
+					name: 'Follow Links',
+					link: './day-22- Follow Along Links/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-22-%20Follow%20Along%20Links',
+				},
+				{
+					name: 'Speech Synthesis',
+					link: './day-23- Speech Synthesis/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-23-%20Speech%20Synthesis',
+				},
+				{
+					name: 'Sticky Nav',
+					link: './day-24- Sticky Nav/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-24-%20Sticky%20Nav',
+				},
+				{
+					name: 'Propagation Bubbling',
+					link: './day-25 - Event Capture, Propagation, Bubbling and Once/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once',
+				},
+				{
+					name: 'Follow Nav',
+					link: './day-26 - Stripe Follow Along Nav/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-26%20-%20Stripe%20Follow%20Along%20Nav',
+				},
+				{
+					name: 'Drag and Scroll',
+					link: './day-27 - Click and Drag to Scroll/index.html',
+					gitLink:
+						'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-27%20-%20Click%20and%20Drag%20to%20Scroll',
+				},
+				{
+					name: 'Video speed controller',
+					link: './day-28 - Video Speed Controller/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-28%20-%20Video%20Speed%20Controller',
+				},
+				{
+					name: 'Countdown Clock',
+					link: './day-29 - Countdown Clock/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-29%20-%20Countdown%20Clock',
+				},
+				{
+					name: 'Mole Games',
+					link: './day-30- Whack A Mole Game/index.html',
+					gitLink: 'https://github.com/NadirBakhsh/javascript-30days/tree/main/day-30-%20Whack%20A%20Mole%20Game',
+				},
+			]
+
+			const wrapperElement = document.querySelector('.wrapper')
+
+			wrapperElement.innerHTML = projects
+				.map((p, i) => {
+					console.log(p.link)
+					return `
+					<div class="card">
+						<div class="card-head">
+							<b>Project - ${i + 1}</b>
+						<a target="_blank" class='git' href="${p.gitLink}">
+							<i class="fa-brands fa-github"></i>
+							</a>
+					</div>
+					<div class="card-body">
+						<img src="./images/(${i + 1}).png" alt="test" />
+					</div>
+					<div class="card-footer">
+					<span>
+						${p.name}
+						</span>
+						<a href="${p.link}" target="_blank">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+					</div>
+				`
+				})
+				.join('')
+		</script>
+	</body>
+</html>
